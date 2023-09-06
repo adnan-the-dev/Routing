@@ -1,0 +1,12 @@
+.bar {
+    height: 50px;
+    border: 2px solid rgb(216, 33, 33);
+    display: flex;
+    /* flex-direction: row ; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar button {
+    padding: 7px;
+}
