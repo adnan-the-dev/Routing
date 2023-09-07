@@ -16,7 +16,7 @@ export default function Navbar() {
                     <button>Shoes</button>
                 </Link>
                 <Link to='watch'>
-                    <button>Watch</button>
+                    <button>Watches</button>
                 </Link>
             </div>
         </>

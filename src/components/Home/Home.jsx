@@ -1,8 +1,11 @@
 import React from 'react'
-
+import "../SharedFile/shared.css"
 export default function Home() {
     return (
-        <div style={{ backgroundColor: 'green', height: '100vh' }}>Home</div>
+        <>
+           
+
+        </>
 
     )
 }

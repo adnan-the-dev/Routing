@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.imges-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+}
+
+.imge img {
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: -3px 4px 11px 2px rgba(143, 140, 140, 0.062);
+    border: 1px solid gray;
+    padding: 15px 0;
+    text-align: center;
+}
