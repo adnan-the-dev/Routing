@@ -1,13 +1,28 @@
-.bar {
-    height: 50px;
-    width: 100%;
-    border: 2px solid rgb(216, 33, 33);
+.navbar {
+    height: 70px;
+    background: #24252a;
     display: flex;
-    /* flex-direction: row ; */
     justify-content: space-around;
     align-items: center;
+    color: #fff;
 }
 
-.bar button {
-    padding: 7px;
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tags li {
+    list-style: none;
+}
+
+.tags li button {
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 20px;
 }
