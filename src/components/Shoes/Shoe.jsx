@@ -23,6 +23,11 @@ export default function Shoe() {
             name: "Running Shoes",
             img: "https://www.campusshoes.com/cdn/shop/products/FIRST_11G-787_ORG-BLK_38e29fbc-1e98-4f87-97a4-289935e5a82d.jpg?v=1670326504",
             price: "50"
+        },
+        {
+            name: "Running Shoes",
+            img: "https://www.campusshoes.com/cdn/shop/products/FIRST_11G-787_ORG-BLK_38e29fbc-1e98-4f87-97a4-289935e5a82d.jpg?v=1670326504",
+            price: "50"
         }
     ]
     return (
@@ -41,26 +46,6 @@ export default function Shoe() {
                 ))}
             </div>
 
-
-
-            {/* 
-            <div className="container">
-                {
-                    shoe.map((shoe, i) => (
-                        <div className="card" key={i}>
-                            <div className="imagbox">
-                                <img src={shoe.img} alt="" />
-                            </div>
-                            <div className="content">
-                                <h2>{shoe.name}</h2>
-                                <p>$:{shoe.price}</p>
-                            </div>
-
-                        </div>
-                    ))
-                }
-
-            </div> */}
         </>
 
     )

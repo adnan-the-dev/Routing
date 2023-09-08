@@ -21,6 +21,11 @@ export default function Watch() {
             name: "Puma Watch",
             img: "https://www.watchrepublic.co.za/media/wysiwyg/ep_puma_banner_mobile.jpg",
             price: "50"
+        },
+        {
+            name: "Puma Watch",
+            img: "https://www.watchrepublic.co.za/media/wysiwyg/ep_puma_banner_mobile.jpg",
+            price: "50"
         }
     ]
     return (
