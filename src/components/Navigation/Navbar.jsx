@@ -1,46 +1,40 @@
 import React from 'react'
 import "./nav.css"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Navbar() {
+    const nav = ['home', 'shoe', 'shirt', 'watch']
     return (
         <>
             <div className='navbar'>
                 <div>
                     <h2>LOGOBAKERY</h2>
                 </div>
-                <div class="tags">
-                    <Link to='home'>
-                        <li><button>Home</button></li>
-                    </Link>
-                    <Link to='shirt'>
-                        <li><button>Shirts</button></li>
-                    </Link>
-                    <Link to='shoe'>
-                        <li><button>Shoes</button></li>
+                <div className="tags">
 
-                    </Link>
-                    <Link to='watch'>
-                        <li><button>Watches</button></li>
-                    </Link>
+                    {nav.map((item, i) => (
+                        <NavLink key={i}
+                            to={item}
+                            style={
+                                ({ isActive }) => ({
+                                    textDecoration: "none",
+                                    backgroundColor: isActive ? "#79B5D9" : "",
+                                    color: 'white',
+                                    padding: '10px 20px',
+                                    fontSize: "16px",
+                                    background: 'transparent',
+                                    border: '1px solid #fff',
+                                    borderRadius: '20px'
+                                })
 
+                            }
+                        >
+                            {item}
+
+                        </NavLink>
+                    ))}
                 </div>
             </div>
-
-
-
-
-            {/* <div class="navbar">
-                <div>
-                    <h2>LOGOBAKERY</h2>
-                </div>
-                <div class="tags">
-                    <li><button>Home</button></li>
-                    <li><button>Shirts</button></li>
-                    <li><button>Shoes</button></li>
-                    <li><button>Watch</button></li>
-                </div>
-            </div> */}
         </>
     )
 }
