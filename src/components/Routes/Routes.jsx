@@ -6,6 +6,7 @@ import Watch from "../Watch/Watch";
 import Allreports from "../Overallreport/Allreports";
 
 export default function AppRoutes({ home }) {
+    // console.log(home,"home");
     return (
         <>
 

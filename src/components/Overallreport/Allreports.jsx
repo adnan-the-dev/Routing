@@ -6,6 +6,7 @@ function Allreports({ home }) {
   const [count, setCount] = useState(1)
 
   const param = useParams()
+  // console.log(param,'param');
   const urlCode = param.code.replace('-', ' ')
 
 
