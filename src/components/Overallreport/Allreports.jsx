@@ -12,7 +12,7 @@ function Allreports({ home }) {
 
   const myProduct = home.find((product) => (product.name.toLowerCase() === urlCode))
 
-  console.log(myProduct, 'myProduct');
+  // console.log(myProduct, 'myProduct');
 
 
   return (
