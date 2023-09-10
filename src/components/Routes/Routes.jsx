@@ -37,7 +37,7 @@ export default function AppRoutes({ home }) {
 
                 <Route path="/shirt">
                     <Route index element={<Shirt />} />
-                    <Route path="detail" element={<Allreports home={home} />} />
+                    <Route path="detail/:code" element={<Allreports home={home} />} />
                 </Route>
 
                 <Route path="/shoe">
