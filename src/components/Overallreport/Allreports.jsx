@@ -6,15 +6,11 @@ function Allreports({ home }) {
   const [count, setCount] = useState(1)
 
   const param = useParams()
-  // console.log(param,'param');
   const urlCode = param.code.replace('-', ' ')
 
 
 
   const myProduct = home.find((product) => (product.name.toLowerCase() === urlCode))
-
-  // console.log(myProduct, 'myProduct');
-
 
   return (
     <>

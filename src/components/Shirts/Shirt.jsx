@@ -49,8 +49,8 @@ export default function Shirt() {
                     </div>
 
                 ))}
-            </div>
-
-        </>
-    )
+            
+                </div>
+                </>
+                )
 }
