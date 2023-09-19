@@ -3,7 +3,7 @@ import "../SharedFile/shared.css"
 import { NavLink } from 'react-router-dom'
 export default function Home({ home }) {
 
-
+    // console.log(home, 'hello');
     return (
         <>
 
@@ -14,22 +14,22 @@ export default function Home({ home }) {
                     const code = home.name.toLowerCase().replace(' ', '-')
 
                     return (
-
-                        <NavLink to={`detail/${code}`} style={
-                            ({ }) => ({
-                                textDecoration: "none",
-                                color: "#000"
-                            })
-                        } >
-                            <div className='card' key={i}>
-                                <div className="imge">
-                                    <h2>{home.name}</h2>
-                                    <img src={home.img} alt="home" />
-                                    <h3>$: {home.price}</h3>
+                        <React.Fragment key={i}>
+                            <NavLink to={`detail/${code}`} style={
+                                ({ }) => ({
+                                    textDecoration: "none",
+                                    color: "#000"
+                                })
+                            } >
+                                <div className='card'>
+                                    <div className="imge">
+                                        <h2>{home.name}</h2>
+                                        <img src={home.img} alt="home" />
+                                        <h3>$: {home.price}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </NavLink>
-
+                            </NavLink>
+                        </React.Fragment>
                     )
                 }
                 )}

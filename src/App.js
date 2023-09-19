@@ -65,7 +65,9 @@ function App() {
       name: "Braker Shoes",
       img: "https://row.barkershoes.com/cdn/shop/collections/c9de6e9bd9195ba8b4ce02dcc7138b6a_600x375_crop_center.jpg?v=1632492625",
       price: "50"
-    }
+    },
+    
+
   ]
   return (
     <>

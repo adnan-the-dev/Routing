@@ -22,7 +22,6 @@ export default function Navbar() {
                                     color: 'white',
                                     padding: '10px 20px',
                                     fontSize: "16px",
-                                    background: 'transparent',
                                     border: '1px solid #fff',
                                     borderRadius: '20px'
                                 })

@@ -42,12 +42,12 @@ export default function AppRoutes({ home }) {
 
                 <Route path="/shoe">
                     <Route index element={<Shoe />} />
-                    <Route path="detail" element={<Allreports home={home} />} />
+                    <Route path="detail/:code" element={<Allreports home={home} />} />
                 </Route>
 
                 <Route path="/watch">
                     <Route index element={<Watch />} />
-                    <Route path="detail" element={<Allreports home={home} />} />
+                    <Route path="detail/:code" element={<Allreports home={home} />} />
                 </Route>
             </Routes>
             <div>

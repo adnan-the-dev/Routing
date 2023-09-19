@@ -1,5 +1,6 @@
 import React from 'react'
 import "../SharedFile/shared.css"
+import { NavLink } from 'react-router-dom'
 export default function Watch() {
     const watch = [
         {
@@ -34,17 +35,25 @@ export default function Watch() {
 
 
             <div className='imges-section'>
-
-                {watch.map((watch, i) => (
-                    <div className='card' key={i}>
-                        <div className="imge">
-                            <h2>{watch.name}</h2>
-                            <img src={watch.img} alt="watches" />
-                            <h3>$: {watch.price}</h3>
-                        </div>
-                    </div>
-
-                ))}
+                {watch.map((watch, i) => {
+                    const code = watch.name.toLowerCase().split(' ').join('-')
+                    return (
+                        <React.Fragment key={i}>
+                            <NavLink to={`detail/${code}`} style={({} = ({
+                                textDecoration: "none",
+                                color: "#000"
+                            }))}>
+                                <div className='card'>
+                                    <div className="imge">
+                                        <h2>{watch.name}</h2>
+                                        <img src={watch.img} alt="watches" />
+                                        <h3>$: {watch.price}</h3>
+                                    </div>
+                                </div>
+                            </NavLink>
+                        </React.Fragment>
+                    )
+                })}
             </div>
         </>
 

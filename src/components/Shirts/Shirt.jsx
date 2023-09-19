@@ -1,5 +1,6 @@
 import React from 'react'
 import "../SharedFile/shared.css"
+import { NavLink } from 'react-router-dom'
 
 export default function Shirt() {
 
@@ -36,21 +37,34 @@ export default function Shirt() {
         }
     ]
     return (
+
         <>
+
             <div className='imges-section'>
+                {shirts.map((shirt, i) => {
+                    const code = shirt.name.toLowerCase().split(' ').join("-")
 
-                {shirts.map((shirt, i) => (
-                    <div className='card' key={i}>
-                        <div className="imge">
-                            <h2>{shirt.name}</h2>
-                            <img src={shirt.img} alt="shirts" />
-                            <h3>$: {shirt.price}</h3>
-                        </div>
-                    </div>
+                    return (
+                        <React.Fragment key={i}>
+                            <NavLink to={`detail/${code}`} style={
+                                {
+                                    textDecoration: "none",
+                                    color: "#000"
+                                }
+                            }>
+                                <div className='card' >
+                                    <div className="imge">
+                                        <h2>{shirt.name}</h2>
+                                        <img src={shirt.img} alt="shirts" />
+                                        <h3>$: {shirt.price}</h3>
+                                    </div>
+                                </div>
+                            </NavLink>
+                        </React.Fragment>
+                    )
+                })}
 
-                ))}
             </div>
-
         </>
     )
 }
