@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './product.css'
 import { useParams } from 'react-router-dom'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider } from '@mui/material'
+
 
 function Allreports({ home }) {
   const [count, setCount] = useState(1)
@@ -10,8 +12,13 @@ function Allreports({ home }) {
   const urlCode = param.code.split('-').join(" ")
 
 
-
   const myProduct = home.find((product) => (product.name.toLowerCase() === urlCode))
+
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => {
+    setShow(false)
+  }
 
   return (
     <>
@@ -35,11 +42,42 @@ function Allreports({ home }) {
             <div onClick={() => setCount(count + 1)} >+</div>
           </div>
           <div className='btn'>
-            <button>Add to cart </button>
+            <button onClick={() => (setShow(true))}>Add to cart </button>
 
           </div>
         </div>
       </div>
+
+
+
+
+      <Dialog onClose={handleClose} open={show}>
+
+
+
+
+        <div className='pop-up'>
+          <DialogTitle>
+            <h2 style={{ padding: 0, margin: "0" }}>*{myProduct.name}*</h2>
+          </DialogTitle>
+
+          <DialogContent sx={{ textAlign: "center", margin: "0", padding: "0" }}>
+            <h2>Total item</h2>
+            <h2>({count})</h2>
+            <Divider />
+            <h2>Total Price</h2>
+            <h2> ($: {myProduct.price * count} )</h2>
+          </DialogContent>
+
+          <DialogActions sx={{ paddingBottom: "30px" }}>
+            <Button variant="contained" color="success">
+              Place Order
+            </Button>
+          </DialogActions>
+        </div>
+
+
+      </Dialog>
     </>
   )
 }
