@@ -5,6 +5,8 @@ import Allreports from './components/Overallreport/Allreports';
 
 
 function App() {
+
+
   const home = [
     {
       name: 'Checkered Shirt',
@@ -66,9 +68,17 @@ function App() {
       img: "https://row.barkershoes.com/cdn/shop/collections/c9de6e9bd9195ba8b4ce02dcc7138b6a_600x375_crop_center.jpg?v=1632492625",
       price: "50"
     },
-    
+
 
   ]
+
+  localStorage.setItem("main_array", JSON.stringify(home))
+
+  let fromLS = localStorage.getItem('main_array')
+
+  console.log(JSON.parse(fromLS), 'hsdjkhsgjk');
+
+
   return (
     <>
       <div>
