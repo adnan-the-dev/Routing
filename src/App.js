@@ -76,7 +76,7 @@ function App() {
 
   let fromLS = localStorage.getItem('main_array')
 
-  console.log(JSON.parse(fromLS), 'hsdjkhsgjk');
+  // console.log(JSON.parse(fromLS), 'hsdjkhsgjk');
 
 
   return (
