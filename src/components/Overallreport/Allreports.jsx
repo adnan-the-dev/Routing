@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './product.css'
 import { useParams } from 'react-router-dom'
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider } from '@mui/material'
+import PendingOrder from '../PendingOrders/PendingOrder'
 
 
 function Allreports({ home }) {
@@ -18,6 +19,11 @@ function Allreports({ home }) {
 
   const handleClose = () => {
     setShow(false)
+  }
+
+  const data = {
+    name: "name",
+    count: "count"
   }
 
   return (
@@ -78,6 +84,8 @@ function Allreports({ home }) {
 
 
       </Dialog>
+
+      {/* <PendingOrder /> */}
     </>
   )
 }

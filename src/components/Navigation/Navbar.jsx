@@ -3,7 +3,7 @@ import "./nav.css"
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
-    const nav = ['home', 'shoe', 'shirt', 'watch']
+    const nav = ['home', 'shoe', 'shirt', 'watch', "orders"]
     return (
         <>
             <div className='navbar'>

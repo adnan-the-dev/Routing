@@ -4,6 +4,7 @@ import Shirt from "../Shirts/Shirt";
 import Shoe from "../Shoes/Shoe";
 import Watch from "../Watch/Watch";
 import Allreports from "../Overallreport/Allreports";
+import PendingOrder from "../PendingOrders/PendingOrder";
 
 export default function AppRoutes({ home }) {
     return (
@@ -48,6 +49,11 @@ export default function AppRoutes({ home }) {
                 <Route path="/watch">
                     <Route index element={<Watch />} />
                     <Route path="detail/:code" element={<Allreports home={home} />} />
+                </Route>
+
+                <Route path="/orders">
+                    <Route index element={<PendingOrder />} />
+                    {/* <Route path="orderDetail/" element={<PendingOrder />} /> */}
                 </Route>
             </Routes>
             <div>
