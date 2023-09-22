@@ -6,7 +6,6 @@ import Allreports from './components/Overallreport/Allreports';
 
 function App() {
 
-
   const home = [
     {
       name: 'Checkered Shirt',
@@ -72,9 +71,9 @@ function App() {
 
   ]
 
-  localStorage.setItem("main_array", JSON.stringify(home))
+  // localStorage.setItem("main_array", JSON.stringify(home))
 
-  let fromLS = localStorage.getItem('main_array')
+  // let fromLS = localStorage.getItem('main_array')
 
   // console.log(JSON.parse(fromLS), 'hsdjkhsgjk');
 

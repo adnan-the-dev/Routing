@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import './product.css'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider } from '@mui/material'
-import PendingOrder from '../PendingOrders/PendingOrder'
 
 
-function Allreports({ home }) {
+function Allreports({ home, callBackFunc }) {
   const [count, setCount] = useState(1)
 
   const param = useParams()
@@ -21,10 +20,29 @@ function Allreports({ home }) {
     setShow(false)
   }
 
-  const data = {
-    name: "name",
-    count: "count"
+  const [arr, setArr] = useState([])
+
+  localStorage.setItem('arr', JSON.stringify(arr))
+
+  function sedData() {
+
+    const newData = [
+      ...arr,
+
+      {
+        name: myProduct.name,
+        items: count,
+        price: myProduct.price * count
+      }
+    ]
+    setArr(newData)
+
+
+    setCount(1)
+    setShow("")
+    alert('Are you sure')
   }
+
 
   return (
     <>
@@ -59,9 +77,6 @@ function Allreports({ home }) {
 
       <Dialog onClose={handleClose} open={show}>
 
-
-
-
         <div className='pop-up'>
           <DialogTitle>
             <h2 style={{ padding: 0, margin: "0" }}>*{myProduct.name}*</h2>
@@ -76,7 +91,7 @@ function Allreports({ home }) {
           </DialogContent>
 
           <DialogActions sx={{ paddingBottom: "30px" }}>
-            <Button variant="contained" color="success">
+            <Button onClick={() => sedData()} variant="contained" color="success">
               Place Order
             </Button>
           </DialogActions>
@@ -85,7 +100,8 @@ function Allreports({ home }) {
 
       </Dialog>
 
-      {/* <PendingOrder /> */}
+
+
     </>
   )
 }

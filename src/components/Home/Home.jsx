@@ -3,7 +3,6 @@ import "../SharedFile/shared.css"
 import { NavLink } from 'react-router-dom'
 export default function Home({ home }) {
 
-    // console.log(home, 'hello');
     return (
         <>
 
