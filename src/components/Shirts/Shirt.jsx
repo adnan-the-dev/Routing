@@ -24,16 +24,6 @@ export default function Shirt() {
             name: 'Plain White',
             img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGwe8Los-h8rp5F--gYdcnEgpjTEZnNSllk2vIjUK1Xd3ggz0R5HxNwxoLl1hNi_OQ_g&usqp=CAU',
             price: '70'
-        },
-        {
-            name: 'Plain White',
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGwe8Los-h8rp5F--gYdcnEgpjTEZnNSllk2vIjUK1Xd3ggz0R5HxNwxoLl1hNi_OQ_g&usqp=CAU',
-            price: '70'
-        },
-        {
-            name: 'Plain White',
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGwe8Los-h8rp5F--gYdcnEgpjTEZnNSllk2vIjUK1Xd3ggz0R5HxNwxoLl1hNi_OQ_g&usqp=CAU',
-            price: '70'
         }
     ]
     return (

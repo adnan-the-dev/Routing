@@ -7,7 +7,8 @@ import Allreports from "../Overallreport/Allreports";
 import PendingOrder from "../PendingOrders/PendingOrder";
 import { useState } from "react";
 
-export default function AppRoutes({ home }) {
+export default function AppRoutes({ home, newArray }) {
+    // console.log(newArray);
     return (
         <>
 
@@ -38,7 +39,7 @@ export default function AppRoutes({ home }) {
                 </Route>
 
                 <Route path="/shirt">
-                    <Route index element={<Shirt />} />
+                    <Route index element={<Shirt newArray={newArray} />} />
                     <Route path="detail/:code" element={<Allreports home={home} />} />
                 </Route>
 

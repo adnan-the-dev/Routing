@@ -45,14 +45,14 @@
 }
 
 .btn {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .btn button {
-    background-color: #000000;
+    /* background-color: #000000; */
     border: none;
     color: white;
-    padding: 15px 103px;
+    padding: 12px 88px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './product.css'
 import { NavLink, useParams } from 'react-router-dom'
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Stack } from '@mui/material'
 
 
 function Allreports({ home, callBackFunc }) {
@@ -65,10 +65,12 @@ function Allreports({ home, callBackFunc }) {
             <div>{count}</div>
             <div onClick={() => setCount(count + 1)} >+</div>
           </div>
-          <div className='btn'>
-            <button onClick={() => (setShow(true))}>Add to cart </button>
 
-          </div>
+          <Stack onClick={() => (setShow(true))} className='btn' direction="row">
+            <Button variant="contained" color="success">
+              Add to cart
+            </Button>
+          </Stack>
         </div>
       </div>
 
